@@ -1,0 +1,40 @@
+class StackWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.grey,
+        child: Stack(
+          textDirection: TextDirection.rtl,
+          alignment: Alignment.topRight,
+          children: [
+            //Align default aayit horizontally and vertically center aayirikkum
+           Positioned(
+            left: 100,
+            top: 350,
+            child:Container(
+              height: 200,
+              width: 200,
+              // color: Colors.yellow,
+              child: Image.network("https://wallpapercave.com/wp/wp7770990.jpg"),
+            )),
+             Positioned(
+            left: 350,
+            bottom: 300,
+            child:Container(
+              height: 100,
+              width: 100,
+              color: Colors.black,
+            )),
+          ],
+        
+        ),
+        
+      ),
+    ); 
+
+    
+  }
+}

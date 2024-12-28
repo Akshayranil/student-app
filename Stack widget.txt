@@ -1,0 +1,43 @@
+//Stack widget
+
+class StackWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.grey,
+        child: Stack(
+          textDirection: TextDirection.rtl,
+          alignment: Alignment.topRight,
+          children: [
+            //Align default aayit horizontally and vertically center aayirikkum
+           Align(
+            alignment: Alignment.topLeft,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+              
+            ),
+           ),
+           Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+              
+            ),
+           ),
+          ],
+        
+        ),
+        
+      ),
+    ); 
+
+    
+  }
+}
